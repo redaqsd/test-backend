@@ -6,11 +6,7 @@ const mongoose = require("mongoose");
 const Test = require("./schema");
 const cors = require("cors");
 
-app.use(cors({
-    origin : ["https://test-app--two.vercel.app/"],
-    methods : ["POST","GET"],
-    credentials : true
-}))
+app.use(cors())
 
 
 app.get("/test", async(req, res) => {
